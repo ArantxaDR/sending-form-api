@@ -1,6 +1,7 @@
 .form {
  display: inherit;
  flex-direction: inherit;
+ justify-content: center;
  gap: 1rem;
 }
 
@@ -23,3 +24,4 @@
     height: 8rem;
     padding-top: 1rem;
 }
+

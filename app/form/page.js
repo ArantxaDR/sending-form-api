@@ -1,4 +1,5 @@
 'use client'
+import ButtonSubmit from '../components/submitButton/page'
 import styles from './page.module.css'
 
 export default function Form () {
@@ -33,7 +34,9 @@ export default function Form () {
       <label className={styles.label} htmlFor='message'>Message
         <textarea className={styles.textarea} required type='text' name='message' placeholder='Send us a message...' minLength='10' />
       </label>
-      <button type='submit'>Sumbit</button>
+
+      <ButtonSubmit />
+
     </form>
   )
 }

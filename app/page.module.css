@@ -8,4 +8,9 @@
   height: 100vh;
 }
 
-
+.title{
+  width: 17rem;
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
