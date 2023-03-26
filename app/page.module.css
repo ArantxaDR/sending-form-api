@@ -1,12 +1,11 @@
 .main {
+  min-height: 100vh;
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  height: 100vh;
 }
 
-.form {
- display: inherit;
- flex-direction: inherit;
-}
+

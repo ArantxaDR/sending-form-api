@@ -5,17 +5,15 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
- --foreground: #000000;
+  --foreground: #000000;
   --background-start: #ee3a50;
   --background-end: #e7f1ff;
  
 }
 @media (prefers-color-scheme: dark) {
   :root {
-     --background-start:#ee3a50;
+    --background-start:#ee3a50;
     --background-end: #e7f1ff;
-   
-
 }
 
 * {
@@ -38,11 +36,6 @@ body {
       var(--background-end)
     )
     var(--background-start);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
