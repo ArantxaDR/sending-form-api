@@ -24,4 +24,26 @@
     height: 8rem;
     padding-top: 1rem;
 }
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.checkbox input[type='checkbox']{
+  outline: none;
+  margin-right: 0.8rem;
+  height: 2rem;
+  width: 2rem;
+}
+.checkbox input[type='checkbox']:checked {
+  background-color: #235ba8;
+  position: relative;
+}
+.checkbox input[type='checkbox']:checked::before {
+  content: "";
+  position: absolute;
+}
 
+.checkbox span{
+  text-align: left;
+}

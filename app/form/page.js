@@ -14,7 +14,7 @@ export default function Form () {
       email: event.target.email.value,
       phone: event.target.phone.value,
       message: event.target.message.value,
-      checkbox: event.target.checked
+      treatment: event.target.value
     }
     // fetch('/api/form', {
     //   method: 'POST',
@@ -40,9 +40,13 @@ export default function Form () {
       <label className={styles.label} htmlFor='message'>Message
         <textarea className={styles.textarea} required type='text' name='message' placeholder='Send us a message...' minLength='10' />
       </label>
-      <label className={styles.label} htmlFor='checkbox'>If you want to choose the treatment, please check this box
-        <input type='checkbox' name='checkbox' checked={isChecked} onChange={e => setIsChecked(e.target.checked)} />
-      </label>
+
+      <div>
+        <label className={styles.checkbox}>
+          <input className={isChecked ? 'checked' : ''} type='checkbox' onChange={e => setIsChecked(e.target.checked)} />
+          <span> If you want to choose the treatment, please check this box</span>
+        </label>
+      </div>
       {
         isChecked === false
           ? null
