@@ -1,11 +1,13 @@
 'use client'
-import ButtonSubmit from '@/app/components/submitButton/page'
+import ButtonSubmit from '@/components/submitButton/page'
+import { v4 as uuidv4 } from 'uuid'
 import styles from './page.module.css'
 
 export default function Form () {
   const handleSubmit = async (event) => {
     event.preventDefault()
     const formData = {
+      id: uuidv4(),
       fullName: event.target.fullName.value,
       email: event.target.email.value,
       phone: event.target.phone.value,

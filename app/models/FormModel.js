@@ -1,21 +1,28 @@
 import { Schema, model, models } from 'mongoose'
 
 const formSchema = new Schema({
+  id: {
+    type: String,
+    require: true,
+    unique: true
+  },
   fullName: {
     type: String,
-    require: true
+    trim: true,
+    require: [true, 'A full name is required'],
+    minLength: [3, 'The name must have more than 10 characters']
   },
   email: {
     type: String,
-    require: true
+    require: [true, 'A valid email is required']
   },
   phone: {
-    type: Number,
-    require: true
+    type: Number
   },
   message: {
     type: String,
-    require: true
+    require: [true, 'The message is required '],
+    minLength: [10, 'The message must have more than 10 characters']
   }
 })
 
