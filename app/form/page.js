@@ -1,5 +1,6 @@
 'use client'
 import ButtonSubmit from '../components/submitButton/page'
+// import ButtonSubmit from '../components/submitButton/page'
 import styles from './page.module.css'
 
 export default function Form () {
@@ -11,7 +12,7 @@ export default function Form () {
       phone: event.target.phone.value,
       message: event.target.message.value
     }
-    fetch('/api/formApi', {
+    fetch('/api/form', {
       method: 'POST',
       body: JSON.stringify(formData)
     })
@@ -34,8 +35,8 @@ export default function Form () {
       <label className={styles.label} htmlFor='message'>Message
         <textarea className={styles.textarea} required type='text' name='message' placeholder='Send us a message...' minLength='10' />
       </label>
-
       <ButtonSubmit />
+      {/* <button type='submit'>Submit</button> */}
 
     </form>
   )
