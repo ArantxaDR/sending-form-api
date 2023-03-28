@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+import { Schema, model, models } from 'mongoose'
 
-const formSchema = new mongoose.Schema({
+const formSchema = new Schema({
   fullName: {
     type: String,
     require: true
@@ -19,6 +19,6 @@ const formSchema = new mongoose.Schema({
   }
 })
 
-const Form = mongoose.model('Form', formSchema)
+const Form = models.Form || model('Form', formSchema)
 
 export default Form

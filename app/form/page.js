@@ -1,6 +1,5 @@
 'use client'
-import ButtonSubmit from '../components/submitButton/page'
-// import ButtonSubmit from '../components/submitButton/page'
+import ButtonSubmit from '@/app/components/submitButton/page'
 import styles from './page.module.css'
 
 export default function Form () {
@@ -25,18 +24,17 @@ export default function Form () {
       </label>
 
       <label className={styles.label} htmlFor='email'>Email
-        <input className={styles.input} required type='email' name='email' placeholder='example@example.com' minLength='3' />
+        <input className={styles.input} required type='email' name='email' placeholder='example@example.com' />
       </label>
 
       <label className={styles.label} htmlFor='phone'>Phone number
-        <input className={styles.input} required type='phone' name='phone' placeholder='555-555-555' minLength='3' />
+        <input className={styles.input} type='tel' name='phone' placeholder='555-555-555' />
       </label>
 
       <label className={styles.label} htmlFor='message'>Message
         <textarea className={styles.textarea} required type='text' name='message' placeholder='Send us a message...' minLength='10' />
       </label>
       <ButtonSubmit />
-      {/* <button type='submit'>Submit</button> */}
 
     </form>
   )
