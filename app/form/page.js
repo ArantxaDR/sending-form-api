@@ -6,9 +6,9 @@ import styles from './page.module.css'
 
 export default function Form () {
   const [isChecked, setIsChecked] = useState(false)
+
   const handleSubmit = async (event) => {
     event.preventDefault()
-
     const formData = {
       id: uuidv4(),
       fullName: event.target.fullName.value,
@@ -21,6 +21,11 @@ export default function Form () {
       method: 'POST',
       body: JSON.stringify(formData)
     })
+    event.target.fullName.value = ''
+    event.target.email.value = ''
+    event.target.phone.value = ''
+    event.target.message.value = ''
+    alert('Your form has been recived successfully')
   }
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -34,11 +39,11 @@ export default function Form () {
       </label>
 
       <label className={styles.label} htmlFor='phone'>Phone number
-        <input className={styles.input} type='tel' name='phone' placeholder='555-555-555' />
+        <input className={styles.input} type='tel' name='phone' placeholder='555555555' pattern='[0-9]{9}' />
       </label>
 
       <label className={styles.label} htmlFor='message'>Message
-        <textarea className={styles.textarea} required type='text' name='message' placeholder='Send us a message...' minLength='10' />
+        <textarea className={styles.textarea} type='text' name='message' placeholder='Send us a message...' minLength='10' />
       </label>
 
       <div>
