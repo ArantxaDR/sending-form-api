@@ -10,7 +10,7 @@
   font-weight: bold;
 }
 
-.input, .textarea{
+.input, .textarea, .courtesy{
     background: #f9f9fa 0 0 no-repeat padding-box;
     border: 0.1rem solid #235ba8;
     border-radius: 2rem;
@@ -47,3 +47,4 @@
 .checkbox span{
   text-align: left;
 }
+

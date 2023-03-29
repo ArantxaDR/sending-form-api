@@ -8,19 +8,19 @@ export default function Form () {
   const [isChecked, setIsChecked] = useState(false)
   const handleSubmit = async (event) => {
     event.preventDefault()
+
     const formData = {
       id: uuidv4(),
       fullName: event.target.fullName.value,
       email: event.target.email.value,
       phone: event.target.phone.value,
       message: event.target.message.value,
-      treatment: event.target.value
+      courtesy: event.target.courtesy === undefined ? '' : event.target.courtesy.value
     }
-    // fetch('/api/form', {
-    //   method: 'POST',
-    //   body: JSON.stringify(formData)
-    // })
-    console.log(formData)
+    fetch('/api/form', {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    })
   }
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -44,14 +44,14 @@ export default function Form () {
       <div>
         <label className={styles.checkbox}>
           <input className={isChecked ? 'checked' : ''} type='checkbox' onChange={e => setIsChecked(e.target.checked)} />
-          <span> If you want to choose the treatment, please check this box</span>
+          <span> If you want to choose the courtesy, please check this box</span>
         </label>
       </div>
       {
         isChecked === false
           ? null
-          : <select name='treatment' className={styles.input}>
-            <option disabled>Choose your treatment...</option>
+          : <select name='courtesy' className={styles.courtesy}>
+            <option>Choose your courtesy...</option>
             <option>Mr.</option>
             <option>Mrs.</option>
           </select>

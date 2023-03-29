@@ -17,12 +17,17 @@ const formSchema = new Schema({
     require: [true, 'A valid email is required']
   },
   phone: {
-    type: Number
+    type: Number,
+    require: false
   },
   message: {
     type: String,
     require: [true, 'The message is required '],
     minLength: [10, 'The message must have more than 10 characters']
+  },
+  courtesy: {
+    type: String,
+    require: false
   }
 })
 
