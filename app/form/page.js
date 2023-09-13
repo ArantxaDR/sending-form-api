@@ -56,9 +56,9 @@ export default function Form () {
         isChecked === false
           ? null
           : <select name='courtesy' className={styles.courtesy}>
-            <option>Choose your courtesy...</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
+              <option>Choose your courtesy...</option>
+              <option>Mr.</option>
+              <option>Mrs.</option>
             </select>
       }
 
