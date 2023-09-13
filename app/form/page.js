@@ -59,7 +59,7 @@ export default function Form () {
             <option>Choose your courtesy...</option>
             <option>Mr.</option>
             <option>Mrs.</option>
-          </select>
+            </select>
       }
 
       <ButtonSubmit />
