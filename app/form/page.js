@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent */
 'use client'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
@@ -56,9 +57,9 @@ export default function Form () {
         isChecked === false
           ? null
           : <select name='courtesy' className={styles.courtesy}>
-              <option>Choose your courtesy...</option>
-              <option>Mr.</option>
-              <option>Mrs.</option>
+            <option>Choose your courtesy...</option>
+            <option>Mr.</option>
+            <option>Mrs.</option>
             </select>
       }
 
