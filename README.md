@@ -1,6 +1,6 @@
-# Mediasmart challenge
+# Form 
 
-Thwe task is to create a form that sends data to a database through an API.
+The task is to create a form that sends data to a database through an API.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
