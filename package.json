@@ -1,6 +1,6 @@
 {
   "homepage": "http://ArantxaDR.github.io/sending-form-api",
-  "name": "mediasmart-challenge",
+  "name": "form-api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
